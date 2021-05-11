@@ -63,7 +63,7 @@ console.log(exo5);
 let exo5bisbis = document.getElementsByTagName('li')[0,1,2,3].parentElement;
 console.log(exo5bisbis);
 //or
-let exo5bisbisbis = document.querySelectorAll('li.important')[0,1,2,3].parentElement;
+let exo5bisbisbis = document.querySelectorAll('.important')[0,1,2,3].parentElement;
 console.log(exo5bisbisbis);
 
 // ### 6. Affiche le premier enfant, du parent de "listElements"
@@ -87,7 +87,7 @@ console.log(exo7);
 let exo7bis = document.getElementsByTagName('li')[3].nextElementSibling.innerText;
 console.log(exo7bis);
 //or
-let exo7bisbis = document.querySelectorAll('li.important')[3].nextElementSibling.innerText;
+let exo7bisbis = document.querySelectorAll('.important')[3].nextElementSibling.innerText;
 console.log(exo7bisbis);
 
 // ### 8. Affiche l'élément qui succède celui qui succède a l'élément ayant comme id "textGeneral" 
@@ -126,7 +126,7 @@ let exo11 = document.querySelector('p.grandParagraphe').innerText;
 console.log('exo11:');
 console.log(exo11);
 //or
-let exo11bis = document.querySelectorAll('p.grandParagraphe')[0].innerText;
+let exo11bis = document.querySelectorAll('.grandParagraphe')[0].innerText;
 console.log(exo11bis);
 
 // ### 12. Trouve une methode qui permet de récupérer plusieurs éléments, qu'ils aient des class ou non et affiche tous les li dansu ne boucle
@@ -137,3 +137,51 @@ exo12bis.forEach(li => {
     console.log(li.innerText)
 })
 
+//correction
+
+//exo1
+let ex1 = document.getElementsByClassName('h3');
+console.log('exo1 = ');
+console.log(ex1[0]);
+//exo2
+console.log('exo2 = ');
+console.log(ex1[1]);
+//exo3
+console.log('exo3 = ');
+console.log(ex1[1].previousElementSibling);
+//exo4
+console.log('exo4 = ');
+let ex4 = document.getElementsByTagName('p')[1].nextElementSibling;
+console.log(ex4);
+//exo5
+console.log('exo5 = ');
+let ex5 = document.getElementsByTagName('ul');
+console.log(ex5[0]);
+//exo6
+console.log('exo6 = ');
+let ex6 = document.getElementsByTagName('ul')[0].parentElement.firstElementChild;
+console.log(ex6);
+//exo7
+console.log('exo7 = ');
+let ex7 = document.getElementsByTagName('li')[4];
+console.log(ex7);
+//exo8
+console.log('exo8 = ');
+let ex8 = document.getElementsByTagName('p')[4];
+console.log(ex8);
+//exo9
+console.log('exo9 = ');
+let ex9 = document.getElementsByTagName('span')[1].parentElement.nextElementSibling;
+console.log(ex9);
+//exo10
+console.log('exo10 = ');
+let ex10 = document.getElementsByTagName('b')[2].parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild;
+console.log(ex10);
+//exo11
+let ex11 = document.querySelector('p.grandParagraphe');
+console.log(ex11);
+//exo12
+let ex12 = document.querySelectorAll('li');
+ex12.forEach(element => {
+    console.log(element);
+});
