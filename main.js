@@ -122,6 +122,18 @@ console.log(exo10bis);
 
 // ### 11. Trouve une methode de récupération qui permet de récupérer "un" élément via sa class ou son id sans utiliser getElementById ou getElementsByClassName et récupère "grandParagraphe"
 
+let exo11 = document.querySelector('p.grandParagraphe').innerText;
+console.log('exo11:');
+console.log(exo11);
+//or
+let exo11bis = document.querySelectorAll('p.grandParagraphe')[0].innerText;
+console.log(exo11bis);
 
 // ### 12. Trouve une methode qui permet de récupérer plusieurs éléments, qu'ils aient des class ou non et affiche tous les li dansu ne boucle
+let exo12 = document.querySelectorAll('li');
+console.log('exo12:');
+let exo12bis = Array.from(exo12);
+exo12bis.forEach(li => {
+    console.log(li.innerText)
+})
 
